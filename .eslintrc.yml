@@ -1,0 +1,15 @@
+# using YAML here for config to specify config info fot eh entire directory
+# but we could use .js or JSON
+
+parser: "babel-eslint"  #specify the JS syntax we need support in, in this case, Babel
+env: #environment defines global variables that are predefined
+  browser: true
+  node: true
+  jest: true
+  es6: true
+extends: #set of enabled rules from base configurations
+  - eslint:recommended
+  - plugin:react/recommended
+settings: #shared settings supplied to every rule that will be executed
+  react:
+    version: "16.0"
